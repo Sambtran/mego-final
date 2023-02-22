@@ -1,0 +1,90 @@
+@import "./layout.scss";
+// MOVIL
+main {
+  background-color: $platamegoc;
+  grid-area: mn;
+  color: rgba(216, 216, 216, 0.829);
+  display: grid;
+  padding-bottom: 7rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "txt"
+    "vid";
+  section#texto {
+    grid-area: txt;
+    margin: {
+      top: 3rem;
+      left: 1rem;
+      right: 1rem;
+    }
+    h1::first-letter {
+      color: $oromegoc;
+    }
+    p::first-letter {
+      color: $oromegoc;
+    }
+  }
+  section#videom {
+    grid-area: vid;
+    height: 13rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    iframe {
+      width: 90%;
+      height: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #fotose {
+      width: 100%;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-around;
+      align-items: center;
+      a {
+        width: 100%;
+        height: 100%;
+        img {
+          border: 1px solid lightcyan;
+          border-radius: 0.2rem;
+          width: 5rem;
+          height: 3rem;
+        }
+      }
+    }
+  }
+}
+
+// MOVIL-PC
+@media (min-width: 768px) {
+  main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding-bottom: 0rem;
+    section#texto {
+      columns: 2;
+      width: 50%;
+    }
+    section#videom {
+      align-self: center;
+      height: 50vh;
+      width: 40%;
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
+      div#fotose {
+        div {
+          img {
+            width: 10vw;
+            height: 10vh;
+          }
+        }
+      }
+    }
+  }
+}
