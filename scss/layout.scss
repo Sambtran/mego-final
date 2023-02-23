@@ -5,7 +5,8 @@
     padding: 0; margin: 0;
     box-sizing: border-box;
 }
-$oromegoc:#c48a02e4;
+$negro:black;
+$oromegoc:#eacf65;
 $platamegoc:#3c3c44;
 // MOVIL
 :root{
@@ -23,16 +24,17 @@ body{
     "ft";
 }
 header{
+    z-index: +1;
     position: sticky;
     top: 0px;
     font-size: 0.9rem;
     grid-area: hd;
-    background-color: $oromegoc;
+    background-color: $negro;
 }
 nav{
     height: 100%;
     width: 100%;
-    color: black;
+    color: rgb(255, 255, 255);
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
@@ -50,7 +52,7 @@ nav{
         height: 80%;
     }
     a{
-        color: black;
+        color: rgb(255, 255, 255);
     }
     
 }
@@ -68,9 +70,9 @@ footer{
     align-items: center;
     min-height: 2rem;
     grid-area: ft;
-    background-color: $oromegoc;
+    background-color: $negro;
     & div a{
-        color: black;
+        color: rgb(255, 255, 255);
     }   
     #redes{
         display: none;

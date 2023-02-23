@@ -20,17 +20,18 @@ body {
 }
 
 header {
+  z-index: 1;
   position: sticky;
   top: 0px;
   font-size: 0.9rem;
   grid-area: hd;
-  background-color: #eacf65;
+  background-color: black;
 }
 
 nav {
   height: 100%;
   width: 100%;
-  color: black;
+  color: white;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
@@ -49,7 +50,7 @@ nav img {
   height: 80%;
 }
 nav a {
-  color: black;
+  color: white;
 }
 
 main {
@@ -66,10 +67,10 @@ footer {
   align-items: center;
   min-height: 2rem;
   grid-area: ft;
-  background-color: #eacf65;
+  background-color: black;
 }
 footer div a {
-  color: black;
+  color: white;
 }
 footer #redes {
   display: none;
@@ -113,4 +114,66 @@ footer #redes {
     position: absolute;
     right: 2rem;
   }
+}
+body {
+  height: 100vh;
+}
+
+main {
+  padding-top: 5rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+main iframe {
+  width: 50%;
+  height: 100%;
+}
+
+section {
+  width: 50%;
+}
+section table, section td {
+  padding: 0.2rem;
+  border: 1px solid white;
+}
+section h1::first-letter, section h2::first-letter {
+  color: #eacf65;
+}
+section p::first-letter {
+  color: #eacf65;
+}
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: #ccc;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+aside {
+  width: 100%;
+  height: 80%;
+  position: absolute;
+  top: 15%;
+  margin-bottom: 1rem;
 }

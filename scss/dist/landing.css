@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 * {
   text-decoration: none;
   padding: 0;
@@ -30,7 +31,7 @@ header {
 nav {
   height: 100%;
   width: 100%;
-  color: rgb(255, 255, 255);
+  color: white;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
@@ -42,14 +43,14 @@ nav div {
 }
 nav div:hover {
   transform: scale(1.2);
-  color: rgb(138, 206, 206);
+  color: #8acece;
 }
 nav img {
   width: 20%;
   height: 80%;
 }
 nav a {
-  color: rgb(255, 255, 255);
+  color: white;
 }
 
 main {
@@ -69,7 +70,7 @@ footer {
   background-color: black;
 }
 footer div a {
-  color: rgb(255, 255, 255);
+  color: black;
 }
 footer #redes {
   display: none;
@@ -79,17 +80,21 @@ footer #redes {
   :root {
     font-size: 16px;
   }
+
   header {
     font-size: 1.8rem;
   }
+
   nav img {
     width: 21.1%;
     height: 100%;
     content: url("../img/megocpc.png");
   }
+
   body {
     height: 100vh;
   }
+
   footer {
     justify-content: left;
   }
@@ -110,83 +115,56 @@ footer #redes {
     right: 2rem;
   }
 }
-main {
-  background-color: #3c3c44;
-  grid-area: mn;
-  color: rgba(216, 216, 216, 0.829);
+body {
   display: grid;
-  padding-bottom: 7rem;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  grid-template-areas: "txt" "vid";
+  grid-template-rows: 1fr 1fr 1fr;
 }
-main section#texto {
-  grid-area: txt;
-  margin-top: 3rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
+
+div:nth-child(1) {
+  background-image: url("../img/megoc1.jpg");
+  background-size: cover;
 }
-main section#texto h1::first-letter {
-  color: #eacf65;
+
+div:nth-child(2) {
+  background-image: url("../img/megoc2.jpeg");
+  background-size: cover;
 }
-main section#texto p::first-letter {
-  color: #eacf65;
+
+div:nth-child(3) {
+  background-image: url("../img/megoc3.jpg");
+  background-size: cover;
 }
-main section#videom {
-  grid-area: vid;
-  height: 13rem;
+
+div {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
   align-items: center;
+  justify-content: center;
+  height: 33vh;
+  background-color: red;
+  text-align: center;
 }
-main section#videom iframe {
-  width: 90%;
-  height: 100%;
-  margin-left: auto;
-  margin-right: auto;
+div h1 {
+  color: red;
+  font-family: "Anton", sans-serif;
+  font-weight: bolder;
+  border-radius: 4rem;
+  -webkit-text-stroke: 2px white;
+  font-size: 3rem;
+  text-shadow: 0.4rem 0.4rem 0.4rem 0.4rem;
 }
-main section#videom #fotose {
-  width: 100%;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  align-items: center;
-}
-main section#videom #fotose a {
-  width: 100%;
-  height: 100%;
-}
-main section#videom #fotose a img {
-  border: 1px solid lightcyan;
-  border-radius: 0.2rem;
-  width: 5rem;
-  height: 3rem;
+
+div > div {
+  backdrop-filter: blur(2px);
 }
 
 @media (min-width: 768px) {
-  main {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    padding-bottom: 0rem;
+  body {
+    transition: all 1s ease;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
-  main section#texto {
-    -moz-columns: 2;
-         columns: 2;
-    width: 50%;
+  body div {
+    height: 100vh;
   }
-  main section#videom {
-    align-self: center;
-    height: 50vh;
-    width: 40%;
-  }
-  main section#videom iframe {
-    width: 100%;
-    height: 100%;
-  }
-  main section#videom div#fotose div img {
-    width: 10vw;
-    height: 10vh;
-  }
-}/*# sourceMappingURL=main.css.map */
+}

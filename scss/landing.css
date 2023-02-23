@@ -21,18 +21,17 @@ body {
 }
 
 header {
-  position: -webkit-sticky;
   position: sticky;
   top: 0px;
   font-size: 0.9rem;
   grid-area: hd;
-  background-color: rgba(196, 138, 2, 0.8941176471);
+  background-color: black;
 }
 
 nav {
   height: 100%;
   width: 100%;
-  color: black;
+  color: rgb(255, 255, 255);
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
@@ -51,7 +50,7 @@ nav img {
   height: 80%;
 }
 nav a {
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 main {
@@ -68,7 +67,7 @@ footer {
   align-items: center;
   min-height: 2rem;
   grid-area: ft;
-  background-color: rgba(196, 138, 2, 0.8941176471);
+  background-color: black;
 }
 footer div a {
   color: black;

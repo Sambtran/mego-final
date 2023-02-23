@@ -20,17 +20,18 @@ body {
 }
 
 header {
+  z-index: 1;
   position: sticky;
   top: 0px;
   font-size: 0.9rem;
   grid-area: hd;
-  background-color: #eacf65;
+  background-color: black;
 }
 
 nav {
   height: 100%;
   width: 100%;
-  color: black;
+  color: white;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
@@ -49,7 +50,7 @@ nav img {
   height: 80%;
 }
 nav a {
-  color: black;
+  color: white;
 }
 
 main {
@@ -66,10 +67,10 @@ footer {
   align-items: center;
   min-height: 2rem;
   grid-area: ft;
-  background-color: #eacf65;
+  background-color: black;
 }
 footer div a {
-  color: black;
+  color: white;
 }
 footer #redes {
   display: none;
