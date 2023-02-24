@@ -20,6 +20,7 @@ body {
 }
 
 header {
+  z-index: 1;
   position: sticky;
   top: 0px;
   font-size: 0.9rem;
