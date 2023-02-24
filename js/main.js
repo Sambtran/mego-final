@@ -13,21 +13,32 @@ function updatear(params) {
         <a href=""><i class="fa-regular fa-envelope"></i>Email</a>
         <a href=""><i class="fa-brands fa-instagram"></i>Instagram</a>`;
     } else {
-      cont.innerHTML = `<img id="logo" src="../img/Megoc.png" alt="Logo de megoc pequeño" />
-          <div>
-            <i class="fa-solid fa-microphone-lines"></i>
-            <p>Ven a cantar con nosotros</p>
-          </div>
-          <div>
-            <i class="fa-regular fa-calendar"> </i>
-            <p>Proximos conciertos</p>
-          </div>`;
+      cont.innerHTML = `      <img id="logo" src="../img/Megoc.png" alt="Logo de megoc pequeño" />
+      <a href="./quienes.html">
+        <div>
+          <i class="fa-solid fa-book"></i>
+          <p>Quienes somos</p>
+        </div>
+      </a>
+      <a href="./Proximos.html">
+        <div>
+          <i class="fa-regular fa-calendar"> </i>
+          <p>Proximos conciertos</p>
+        </div>
+      </a>`;
       click = 0;
     }
     updatear()
   });
 }
 updatear();
+  setInterval(() => {
+    logo.style.transform="scale(2)"
+    logo.style.transition="all 1s ease-in-out"
+    setTimeout(() => {
+      logo.style.transform="scale(1)"
+    },700)  
+  },6000)
 }else{
 
 }
